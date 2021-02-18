@@ -1,0 +1,51 @@
+PROCEDURE dot_product (v1,v2: ARRAY_OF INTEGER;)
+
+j,i:INTEGER;
+sum:INTEGER:=0;
+FOR i FROM 0 TO length v1  DO
+FOR j FROM 0 TO length v2  DO
+sum= sum +(v1[i] * v2[j])
+write (sum)
+
+END_FOR
+END_FOR
+
+
+ALGORITHM scalar_procedure
+VAR
+v1,v2:INTEGER;
+BEGIN
+dot_product (v1,v2,sum)
+IF (sum=0) THEN
+    write ("two vectors of given IR are orthogonal")
+    else 
+    write ("two vectors of given IR are note orthogonal")
+
+END_IF
+
+END
+
+FUNCTION dot_product  (v1,v2: ARRAY_OF INTEGER;) : INTEGER
+j,i:INTEGER;
+sum:INTEGER;
+FOR i FROM 0 TO length v1  DO
+FOR j FROM 0 TO length v2  DO
+sum= sum +(v1[i] * v2[j])
+write (sum)
+
+ALGORITHM scalar_function
+VAR
+v1,v2:INTEGER;
+n:INTEGER;
+BEGIN
+dot_product (n,v1,v2)
+IF (sum=0) THEN
+
+    write ("two vectors of given IR are orthogonal")
+    else 
+    write ("two vectors of given IR are note orthogonal")
+
+END_IF
+
+
+END
